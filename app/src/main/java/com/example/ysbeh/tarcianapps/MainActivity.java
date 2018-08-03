@@ -19,12 +19,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     public static final String REC_POSITION = "pos";
     public static Fragment currentFragment;
     AlertDialog.Builder builder;
+    DrawerLayout drawer;
     // ListView timetablelist;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +46,9 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
+        fab.setVisibility(View.INVISIBLE);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -150,19 +153,24 @@ public class MainActivity extends AppCompatActivity
 
 
         }else if (id == R.id.nav_about) {
-
+           // drawer.closeDrawers();
 
 
 
         }else if (id == R.id.nav_logout) {
 
-
+           // drawer.closeDrawers();
 
 
         }
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+        if(fragment!=null){
+            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+
+        }else{
+            Toast.makeText(this,"this fragment is not available",Toast.LENGTH_SHORT).show();
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
