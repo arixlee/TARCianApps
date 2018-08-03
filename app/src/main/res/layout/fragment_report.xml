@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1">
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:text="@string/reportMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+        style="@style/customerTextStyle"
+        android:elevation="1dp" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/reportSpinner"
+            style="@style/SpinnerItemStyle" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:ems="10"
+            android:layout_weight="1"
+            android:id="@+id/reportMessageEditText"
+            android:hint="@string/errorMessagehint"
+            style="@style/customerTextStyle"/>
+
+        <Button
+            android:text="@string/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/buttonSubmitError" />
+
+    </LinearLayout>
+</FrameLayout>

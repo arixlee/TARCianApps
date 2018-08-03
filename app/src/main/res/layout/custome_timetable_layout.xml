@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_today"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:id="@+id/imageView2" />
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:stretchColumns="1"
+        android:layout_toRightOf="@+id/imageView2">
+       <TableRow>
+        <TextView
+            android:layout_column="1"
+            android:padding="3dip"
+           android:text="Subject"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:gravity="end"
+            android:padding="3dip"
+            android:text="Time"
+            android:textAlignment="gravity"
+            android:layout_width="match_parent"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textStyle="bold"
+            />
+
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_column="1"
+            android:padding="3dip"
+            android:id="@+id/timetableCourseText"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+        <TextView
+            android:layout_column="1"
+            android:padding="3dip"
+            android:id="@+id/dayText"/>
+        <TextView
+            android:gravity="right"
+            android:padding="3dip"
+            android:id="@+id/timetableTimeText" />
+
+    </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:padding="3dip"
+                android:id="@+id/venueText"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+            <TextView
+                android:gravity="end"
+                android:padding="3dip"
+                android:id="@+id/tutorText"
+                android:textAlignment="gravity"
+                android:layout_width="match_parent"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+        </TableRow>
+    </TableLayout>
+
+
+</RelativeLayout>
