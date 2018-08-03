@@ -1,7 +1,8 @@
 # TARCianApps
-android application coursework, only timetable,map and report false is workable
+Android application coursework
 
 this project is for educational purpose only.
+backend using JSON and PHP
 
 # Sample screenshoot
 
