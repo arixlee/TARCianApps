@@ -133,24 +133,25 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_profile) {
             fragment = new ProfileFragment();
+            setTitle("Profile");
 
 
         } else if (id == R.id.nav_courseinfo) {
             fragment = new CourseInfoFragment();
-
+            setTitle("Course Information");
 
         } else if (id == R.id.nav_timetable) {
              fragment = new TimetableFragment();
-
+            setTitle("Timetable");
 
 
         } else if (id == R.id.nav_maps) {
             fragment = new MapsFragment();
-
+            setTitle("Map");
 
         } else if (id == R.id.nav_report) {
             fragment = new ReportFragment();
-
+            setTitle("Report false");
 
         }else if (id == R.id.nav_about) {
            // drawer.closeDrawers();
